@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "JIjaEfLcPWl1Z9vCXTxsMAN1kMlpqmO3grXz8F3JmeqfUHhRImgKVjK6F992pVyzo8vuVRMdage9TX9eiqvZtg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mgdbe\\OneDrive\\Área de Trabalho\\pp\\prog_acess_bd\\blazor_application_calcular_imc\\blazor_application_calcular_imc.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mgdbe\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\mgdbe\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\mgdbe\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\mgdbe\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.28\\microsoft.netcore.app.host.win-x64.6.0.28.nupkg.sha512"
+  ],
+  "logs": []
+}

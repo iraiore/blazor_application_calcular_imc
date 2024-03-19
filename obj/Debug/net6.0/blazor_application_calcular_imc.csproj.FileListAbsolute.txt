@@ -1,0 +1,7 @@
+C:\Users\mgdbe\OneDrive\Área de Trabalho\pp\prog_acess_bd\blazor_application_calcular_imc\obj\Debug\net6.0\blazor_application_calcular_imc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mgdbe\OneDrive\Área de Trabalho\pp\prog_acess_bd\blazor_application_calcular_imc\obj\Debug\net6.0\blazor_application_calcular_imc.AssemblyInfoInputs.cache
+C:\Users\mgdbe\OneDrive\Área de Trabalho\pp\prog_acess_bd\blazor_application_calcular_imc\obj\Debug\net6.0\blazor_application_calcular_imc.AssemblyInfo.cs
+C:\Users\mgdbe\OneDrive\Área de Trabalho\pp\prog_acess_bd\blazor_application_calcular_imc\obj\Debug\net6.0\blazor_application_calcular_imc.csproj.CoreCompileInputs.cache
+C:\Users\mgdbe\OneDrive\Área de Trabalho\pp\prog_acess_bd\blazor_application_calcular_imc\obj\Debug\net6.0\blazor_application_calcular_imc.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\mgdbe\OneDrive\Área de Trabalho\pp\prog_acess_bd\blazor_application_calcular_imc\obj\Debug\net6.0\blazor_application_calcular_imc.RazorAssemblyInfo.cache
+C:\Users\mgdbe\OneDrive\Área de Trabalho\pp\prog_acess_bd\blazor_application_calcular_imc\obj\Debug\net6.0\blazor_application_calcular_imc.RazorAssemblyInfo.cs

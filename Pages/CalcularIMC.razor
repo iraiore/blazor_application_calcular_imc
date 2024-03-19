@@ -1,0 +1,101 @@
+﻿@page "/CalcularIMC"
+@using blazor_application_calcular_imc.Models
+<h3>CalcularIMC</h3>
+
+<div class="container">
+    <h3><center>Calculadora De Imc</center></h3>
+    
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">NOME:</label>
+        <input @bind = "nome" type="text" class="form-control" id="exampleFormControlInput1">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">PESO:</label>
+        <input @bind="peso" type="number" class="form-control" id="exampleFormControlInput1">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">ALTURA :</label>
+        <input @bind="altura" type="number" class="form-control" id="exampleFormControlInput1">
+    </div>
+
+    <button @onclick="CalculoIMC" class="btn btn-primary">CALCULAR</button>
+    <button @onclick="Cancelar" class="btn btn-warning">CANCELAR</button>
+    <button @onclick="Salvar" class="btn btn-success">SALVAR</button>
+
+    <nav class="navbar navbar-light" style="background-color: white"></nav>
+
+    <nav class="navbar navbar-light" style="background-color: darkgreen"></nav>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">RESULTADO:</label>
+        <input @bind="resultadoIMC" type="number" class="form-control" id="exampleFormControlInput1">
+    </div>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">CLASSIFICAÇÃO: </label>
+        <input @bind="classificacaoIMC" id="classificacao" type="text" class="form-control" readonly>
+    </div>
+</div>
+
+@code {
+    private string? nome = "";
+    private double? peso = 0;
+    private double? altura = 0;
+    private double resultadoIMC = 0;
+    private string classificacaoIMC = "";
+    //Método para Salvar
+    private void Salvar()
+    {
+        Pessoa pessoa = new Pessoa();
+        pessoa.Nome = nome;
+        pessoa.Peso = peso;
+        pessoa.Altura = altura;
+        pessoa.ResultadoIMC = CalculoIMC();
+        pessoa.ClassificacaoIMC = ClassificarIMC();
+
+    }
+
+    private void Cancelar()
+    {
+        Pessoa pessoa = new Pessoa();
+        classificacaoIMC = "";
+    }
+
+    private double CalculoIMC()
+    {
+        return resultadoIMC = (double)peso / (double)(altura * altura);     
+    }
+
+    private string ClassificarIMC(){
+
+        if (resultadoIMC < 18.5)
+        {
+            classificacaoIMC = "Abaixo do Peso";
+        }
+        else if (resultadoIMC < 24.9)
+        {
+            classificacaoIMC = "Peso Normal";
+        }
+        else if (resultadoIMC < 29.9)
+        {
+            classificacaoIMC = "Sobrepeso";
+        }
+        else if (resultadoIMC < 34.9)
+        {
+            classificacaoIMC = "Obesidade Grau I";
+        }
+        else if (resultadoIMC < 39.9)
+        {
+            classificacaoIMC = "Obesidade Grau II";
+        }
+        else
+        {
+            classificacaoIMC = "Obesidade Grau III";
+        }
+
+        return classificacaoIMC;
+
+    }
+}
