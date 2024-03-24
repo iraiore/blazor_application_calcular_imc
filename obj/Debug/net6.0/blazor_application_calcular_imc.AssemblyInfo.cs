@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("blazor_application_calcular_imc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de88c02f9c572f6fb7403b522a86d28c35f23513")]
 [assembly: System.Reflection.AssemblyProductAttribute("blazor_application_calcular_imc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("blazor_application_calcular_imc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

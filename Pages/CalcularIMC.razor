@@ -3,7 +3,7 @@
 <h3>CalcularIMC</h3>
 
 <div class="container">
-    <h3><center>Calculadora De Imc</center></h3>
+    <h3><center>Calculadora De IMC</center></h3>
     
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">NOME:</label>
@@ -37,35 +37,74 @@
         <label for="exampleFormControlInput1" class="form-label">CLASSIFICAÇÃO: </label>
         <input @bind="classificacaoIMC" id="classificacao" type="text" class="form-control" readonly>
     </div>
+
+    <div class="table">
+       
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">NOME</th>
+                <th scope="col">PESO</th>
+                <th scope="col">ALTURA</th>
+                <th scope="col">IMC</th>
+                <th scope="col">CLASSIFICAÇÃO IMC</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Pessoas)
+            {
+                <tr>
+                    <th>@item.Id</th>
+                    <th>@item.Nome</th>
+                    <th>@item.Peso</th>
+                    <th>@item.Altura</th>
+                    <th>@item.ResultadoIMC</th>
+                    <th>@item.ClassificacaoIMC</th>
+                </tr>
+            }
+        </tbody>
+    </div>
 </div>
 
 @code {
+    private List<Pessoa> Pessoas = new List<Pessoa>();
     private string? nome = "";
     private double? peso = 0;
     private double? altura = 0;
-    private double resultadoIMC = 0;
+    private double? resultadoIMC = 0;
     private string classificacaoIMC = "";
+    private int? id = 0;
+
     //Método para Salvar
     private void Salvar()
     {
+        //private List<Pessoa> Pessoas = new List<Pessoa>();
         Pessoa pessoa = new Pessoa();
+        id++;
+        pessoa.Id = id;
         pessoa.Nome = nome;
         pessoa.Peso = peso;
         pessoa.Altura = altura;
-        pessoa.ResultadoIMC = CalculoIMC();
-        pessoa.ClassificacaoIMC = ClassificarIMC();
+        pessoa.ResultadoIMC = resultadoIMC;
+        pessoa.ClassificacaoIMC = classificacaoIMC;
+
+        Pessoas.Add(pessoa);
+
+        nome = ""; peso = 0; altura = 0; resultadoIMC = 0; classificacaoIMC = "";
 
     }
 
     private void Cancelar()
     {
-        Pessoa pessoa = new Pessoa();
-        classificacaoIMC = "";
+        nome = ""; peso = 0; altura = 0; resultadoIMC = 0; classificacaoIMC = "";
     }
 
-    private double CalculoIMC()
+    private void CalculoIMC()
     {
-        return resultadoIMC = (double)peso / (double)(altura * altura);     
+        resultadoIMC = peso / (altura * altura);
+        resultadoIMC=Math.Round((double)resultadoIMC, 2);
+        classificacaoIMC = ClassificarIMC();
+
     }
 
     private string ClassificarIMC(){
@@ -96,6 +135,5 @@
         }
 
         return classificacaoIMC;
-
     }
 }
